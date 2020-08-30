@@ -37,7 +37,8 @@ public class GreetingController {
                 .memberId(memberId)
                 .build();
 
-        PageRequest pageRequest = PageRequest.of(page - 1, size, Sort.by("id"));
+        // Sort.by 가 필요한 경우에 추가할 것
+        PageRequest pageRequest = PageRequest.of(page - 1, size);
 
         return ResponseEntity.ok().body(this.greetingGetService.findGreetings(greetingSearchRequest, pageRequest));
     }
