@@ -1,6 +1,6 @@
-package hyoseok.adapter.presentation.web.greeting.dto;
+package wdys.adapter.presentation.web.greeting.dto;
 
-import hyoseok.domain.model.Greeting;
+import wdys.domain.model.Greeting;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

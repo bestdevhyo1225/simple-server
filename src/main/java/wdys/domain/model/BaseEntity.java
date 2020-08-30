@@ -1,4 +1,4 @@
-package hyoseok.domain.model;
+package wdys.domain.model;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;

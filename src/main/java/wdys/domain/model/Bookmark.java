@@ -1,4 +1,4 @@
-package hyoseok.domain.model;
+package wdys.domain.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

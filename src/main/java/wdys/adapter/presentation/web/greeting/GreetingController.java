@@ -1,8 +1,8 @@
-package hyoseok.adapter.presentation.web.greeting;
+package wdys.adapter.presentation.web.greeting;
 
-import hyoseok.application.GreetingCommandService;
-import hyoseok.application.GreetingGetService;
-import hyoseok.adapter.presentation.web.greeting.dto.*;
+import wdys.application.GreetingCommandService;
+import wdys.application.GreetingGetService;
+import wdys.adapter.presentation.web.greeting.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;

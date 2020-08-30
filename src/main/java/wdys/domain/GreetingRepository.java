@@ -1,6 +1,6 @@
-package hyoseok.domain;
+package wdys.domain;
 
-import hyoseok.domain.model.Greeting;
+import wdys.domain.model.Greeting;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

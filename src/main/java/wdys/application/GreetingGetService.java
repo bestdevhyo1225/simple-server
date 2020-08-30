@@ -1,12 +1,12 @@
-package hyoseok.application;
+package wdys.application;
 
-import hyoseok.adapter.presentation.web.greeting.dto.GreetingListViewResponse;
-import hyoseok.adapter.presentation.web.greeting.dto.GreetingDetailViewResponse;
-import hyoseok.adapter.presentation.web.greeting.dto.GreetingSearchRequest;
-import hyoseok.domain.BookmarkRepository;
-import hyoseok.domain.GreetingRepository;
-import hyoseok.domain.model.Bookmark;
-import hyoseok.domain.model.Greeting;
+import wdys.adapter.presentation.web.greeting.dto.GreetingListViewResponse;
+import wdys.adapter.presentation.web.greeting.dto.GreetingDetailViewResponse;
+import wdys.adapter.presentation.web.greeting.dto.GreetingSearchRequest;
+import wdys.domain.BookmarkRepository;
+import wdys.domain.GreetingRepository;
+import wdys.domain.model.Bookmark;
+import wdys.domain.model.Greeting;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

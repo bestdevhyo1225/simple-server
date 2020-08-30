@@ -1,9 +1,9 @@
-package hyoseok.application;
+package wdys.application;
 
-import hyoseok.adapter.presentation.web.greeting.dto.GreetingCreateRequest;
-import hyoseok.adapter.presentation.web.greeting.dto.GreetingCreatedResponse;
-import hyoseok.domain.GreetingRepository;
-import hyoseok.domain.model.Greeting;
+import wdys.adapter.presentation.web.greeting.dto.GreetingCreateRequest;
+import wdys.adapter.presentation.web.greeting.dto.GreetingCreatedResponse;
+import wdys.domain.GreetingRepository;
+import wdys.domain.model.Greeting;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

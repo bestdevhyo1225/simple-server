@@ -1,7 +1,7 @@
-package hyoseok.adapter.infrastructure.jpa;
+package wdys.adapter.infrastructure.jpa;
 
-import hyoseok.domain.GreetingRepository;
-import hyoseok.domain.model.Greeting;
+import wdys.domain.GreetingRepository;
+import wdys.domain.model.Greeting;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
