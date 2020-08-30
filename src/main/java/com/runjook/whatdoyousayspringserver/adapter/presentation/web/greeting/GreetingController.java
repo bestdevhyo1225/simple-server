@@ -1,0 +1,57 @@
+package com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting;
+
+import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.*;
+import com.runjook.whatdoyousayspringserver.application.GreetingCommandService;
+import com.runjook.whatdoyousayspringserver.application.GreetingGetService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+@RestController
+@RequestMapping("/greetings")
+@RequiredArgsConstructor
+public class GreetingController {
+
+    private final GreetingGetService greetingGetService;
+
+    private final GreetingCommandService greetingCommandService;
+
+    @GetMapping
+    public ResponseEntity<List<GreetingListViewResponse>> findGreetings(@RequestParam final String situation,
+                                                                        @RequestParam final String honorific,
+                                                                        @RequestParam final String sentenceLength,
+                                                                        @RequestParam(defaultValue = "1") final int page,
+                                                                        @RequestParam(defaultValue = "10") final int size,
+                                                                        @RequestParam(required = false) final Long memberId) {
+        GreetingSearchRequest greetingSearchRequest = GreetingSearchRequest.builder()
+                .situation(situation)
+                .honorific(honorific)
+                .sentenceLength(sentenceLength)
+                .memberId(memberId)
+                .build();
+
+        PageRequest pageRequest = PageRequest.of(page - 1, size, Sort.by("id"));
+
+        return ResponseEntity.ok().body(this.greetingGetService.findGreetings(greetingSearchRequest, pageRequest));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<GreetingDetailViewResponse> findGreeting(@PathVariable Long id) {
+        return ResponseEntity.ok().body(this.greetingGetService.findGreeting(id));
+    }
+
+    @PostMapping
+    public ResponseEntity<GreetingCreatedResponse> createGreeting(@RequestBody @Valid GreetingCreateRequest greetingCreateRequest) {
+        GreetingCreatedResponse greetingCreatedResponse = this.greetingCommandService.createGreeting(greetingCreateRequest);
+
+        return ResponseEntity.created(URI.create("/greetings/" + greetingCreatedResponse.getId())).body(greetingCreatedResponse);
+    }
+
+}
