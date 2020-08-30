@@ -1,4 +1,4 @@
-package com.runjook.whatdoyousayspringserver.domain.model;
+package com.runjook.domain.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

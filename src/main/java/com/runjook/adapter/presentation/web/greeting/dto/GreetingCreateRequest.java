@@ -1,4 +1,4 @@
-package com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto;
+package com.runjook.adapter.presentation.web.greeting.dto;
 
 import lombok.Builder;
 import lombok.Getter;

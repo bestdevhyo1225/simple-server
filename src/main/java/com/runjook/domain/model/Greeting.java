@@ -1,6 +1,6 @@
-package com.runjook.whatdoyousayspringserver.domain.model;
+package com.runjook.domain.model;
 
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.GreetingCreateRequest;
+import com.runjook.adapter.presentation.web.greeting.dto.GreetingCreateRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -1,7 +1,7 @@
-package com.runjook.whatdoyousayspringserver.domain;
+package com.runjook.domain;
 
-import com.runjook.whatdoyousayspringserver.domain.model.Bookmark;
-import com.runjook.whatdoyousayspringserver.domain.model.Greeting;
+import com.runjook.domain.model.Greeting;
+import com.runjook.domain.model.Bookmark;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

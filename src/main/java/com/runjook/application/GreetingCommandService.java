@@ -1,9 +1,9 @@
-package com.runjook.whatdoyousayspringserver.application;
+package com.runjook.application;
 
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.GreetingCreateRequest;
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.GreetingCreatedResponse;
-import com.runjook.whatdoyousayspringserver.domain.GreetingRepository;
-import com.runjook.whatdoyousayspringserver.domain.model.Greeting;
+import com.runjook.adapter.presentation.web.greeting.dto.GreetingCreateRequest;
+import com.runjook.adapter.presentation.web.greeting.dto.GreetingCreatedResponse;
+import com.runjook.domain.GreetingRepository;
+import com.runjook.domain.model.Greeting;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

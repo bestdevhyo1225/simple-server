@@ -1,18 +1,16 @@
-package com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting;
+package com.runjook.adapter.presentation.web.greeting;
 
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.*;
-import com.runjook.whatdoyousayspringserver.application.GreetingCommandService;
-import com.runjook.whatdoyousayspringserver.application.GreetingGetService;
+import com.runjook.adapter.presentation.web.greeting.dto.*;
+import com.runjook.application.GreetingCommandService;
+import com.runjook.application.GreetingGetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/greetings")

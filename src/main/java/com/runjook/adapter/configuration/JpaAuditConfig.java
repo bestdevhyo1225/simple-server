@@ -1,4 +1,4 @@
-package com.runjook.whatdoyousayspringserver.adapter.configuration;
+package com.runjook.adapter.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

@@ -1,12 +1,12 @@
-package com.runjook.whatdoyousayspringserver.application;
+package com.runjook.application;
 
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.GreetingDetailViewResponse;
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.GreetingListViewResponse;
-import com.runjook.whatdoyousayspringserver.adapter.presentation.web.greeting.dto.GreetingSearchRequest;
-import com.runjook.whatdoyousayspringserver.domain.BookmarkRepository;
-import com.runjook.whatdoyousayspringserver.domain.GreetingRepository;
-import com.runjook.whatdoyousayspringserver.domain.model.Bookmark;
-import com.runjook.whatdoyousayspringserver.domain.model.Greeting;
+import com.runjook.adapter.presentation.web.greeting.dto.GreetingListViewResponse;
+import com.runjook.adapter.presentation.web.greeting.dto.GreetingDetailViewResponse;
+import com.runjook.adapter.presentation.web.greeting.dto.GreetingSearchRequest;
+import com.runjook.domain.BookmarkRepository;
+import com.runjook.domain.GreetingRepository;
+import com.runjook.domain.model.Bookmark;
+import com.runjook.domain.model.Greeting;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
