@@ -26,10 +26,7 @@ public class BookmarkCommandService {
                 .findById(greetingId)
                 .orElseThrow(() -> new NoSuchElementException("존재하지 않는 인사말입니다."));
 
-        Optional<Bookmark> optionalBookmark = this.bookmarkRepository.findOneByMemberIdAndGreeting(
-                memberId,
-                greeting
-        );
+        Optional<Bookmark> optionalBookmark = this.bookmarkRepository.findOneByMemberIdAndGreeting(memberId, greeting);
 
         Bookmark bookmark;
 
