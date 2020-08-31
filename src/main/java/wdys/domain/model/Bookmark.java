@@ -16,7 +16,6 @@ import static lombok.AccessLevel.PROTECTED;
 @Setter
 @Getter
 @NoArgsConstructor(access = PROTECTED)
-@Where(clause = "is_on = true")
 @Table(name = "bookmark",
         indexes = {
                 @Index(columnList = "member_id", name = "idx_bookmark__member_id"),
@@ -43,8 +42,20 @@ public class Bookmark {
     private Greeting greeting;
 
     /* 생성 메소드 */
-//    public static Bookmark createBookmark() {
-//
-//    }
+    public static Bookmark createBookmark(final Long memberId,
+                                          final Boolean isOn,
+                                          final Greeting greeting) {
+        Bookmark bookmark = new Bookmark();
+
+        bookmark.setMemberId(memberId);
+        bookmark.setIsOn(isOn);
+        bookmark.setGreeting(greeting);
+
+        return bookmark;
+    }
+
+    public void changeBookmark(final Boolean isOn) {
+        this.isOn = isOn;
+    }
 
 }

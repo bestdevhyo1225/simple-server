@@ -1,14 +1,14 @@
 package wdys.application;
 
+import org.springframework.data.domain.Page;
+import wdys.adapter.infrastructure.jpa.BookmarkJpaRepository;
+import wdys.adapter.infrastructure.jpa.GreetingJpaRepository;
 import wdys.adapter.presentation.web.greeting.dto.GreetingListViewResponse;
 import wdys.adapter.presentation.web.greeting.dto.GreetingDetailViewResponse;
 import wdys.adapter.presentation.web.greeting.dto.GreetingSearchRequest;
-import wdys.domain.BookmarkRepository;
-import wdys.domain.GreetingRepository;
 import wdys.domain.model.Bookmark;
 import wdys.domain.model.Greeting;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,9 +20,9 @@ import java.util.*;
 @Transactional(readOnly = true)
 public class GreetingGetService {
 
-    private final GreetingRepository greetingRepository;
+    private final GreetingJpaRepository greetingRepository;
 
-    private final BookmarkRepository bookmarkRepository;
+    private final BookmarkJpaRepository bookmarkRepository;
 
     public List<GreetingListViewResponse> findGreetings(final GreetingSearchRequest greetingSearchRequest,
                                                         final Pageable pageable) {

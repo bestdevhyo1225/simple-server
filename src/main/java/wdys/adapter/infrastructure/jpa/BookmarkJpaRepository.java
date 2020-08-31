@@ -1,21 +1,20 @@
 package wdys.adapter.infrastructure.jpa;
 
-import wdys.domain.model.Greeting;
-import wdys.domain.BookmarkRepository;
-import wdys.domain.model.Bookmark;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import wdys.domain.model.Bookmark;
+import wdys.domain.model.Greeting;
 
 import java.util.Optional;
 
-public interface BookmarkJpaRepository extends JpaRepository<Bookmark, Long>, BookmarkRepository {
+public interface BookmarkJpaRepository extends JpaRepository<Bookmark, Long> {
 
-    @Query("select b from Bookmark b where b.memberId = :memberId")
+    @Query(value = "select b from Bookmark b where b.memberId = :memberId and b.isOn = true")
     Page<Bookmark> findAllByMemberId(Long memberId, Pageable pageable);
 
-    @Query("select b from Bookmark b where b.greeting = :greeting and b.memberId = :memberId")
-    Optional<Bookmark> findByGreetingAndMemberId(final Greeting greeting, final Long memberId);
+    @Query(value = "select b from Bookmark b where b.memberId = :memberId and b.greeting = :greeting")
+    Optional<Bookmark> findOneByMemberIdAndGreeting(Long memberId, Greeting greeting);
 
 }
